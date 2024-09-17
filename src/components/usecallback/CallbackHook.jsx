@@ -14,7 +14,7 @@ const Callbackhook = () => {
 
   const addTodo = useCallback(() => {
     return setTodos((prev) => [...prev, `new Entry`]);
-  }, [todos]);
+  }, [todos]);                                               // jab todos change hoga tabhi call hoga setTodos 
 
   return (
     <Wrapper>

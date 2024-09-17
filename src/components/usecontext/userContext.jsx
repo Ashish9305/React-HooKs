@@ -2,7 +2,7 @@ import { createContext, useContext } from "react";
 
 const AppContext = createContext();
 
-const AppProvider = ({ children }) => {
+const AppProvider = ({ children }) => {  // here children is nothing but whole app component
   const userData = {
     name: "vinod",
     age: 28,

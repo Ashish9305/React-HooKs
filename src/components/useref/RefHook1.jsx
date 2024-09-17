@@ -7,7 +7,8 @@ import styled from "styled-components";
 const RefHook1 = () => {
   const [userInput, setUserInput] = useState("");
   // const [count, setCount] = useState();
-  const count = useRef(0);
+  const count = useRef(0);  // useRef always return a property which name is current 
+  // useRef jo hai wo reRender nahi karne deta hai 
   // console.log("🚀 ~ file: RefHook1.jsx ~ line 11 ~ RefHook1 ~ count", count);
 
   useEffect(() => {

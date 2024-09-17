@@ -4,14 +4,14 @@ import styled from "styled-components";
 const ClearUp = () => {
   const [widthCount, setWidthCount] = useState(window.screen.width);
 
-  const currentScreenWidth = () => {
+  const currentScreenWidth = () => {                 
     setWidthCount(() => window.innerWidth);
   };
-
+              
   useEffect(() => {
     window.addEventListener("resize", currentScreenWidth);
     return () => {
-      window.removeEventListener("resize", currentScreenWidth);
+      window.removeEventListener("resize", currentScreenWidth);   // this is done to remove the previous data which is automatically by eventlistner to delete it 
     };
   });
   return (

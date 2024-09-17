@@ -8,7 +8,7 @@ const UseEffect = () => {
 
   const countUpdate = (val) => {
     if (val === "inc") return setCount(count + 1);
-    if (val === "dec") return setCount(count - 1);
+    if (val === "dec" && count>0 ) return setCount(count - 1);
   };
 
   useEffect(() => {

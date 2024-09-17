@@ -1,4 +1,4 @@
-import { useReducer } from "react";
+import { useState,useReducer } from "react"; // first import useReducer in top 
 import styled from "styled-components";
 import { BiPlusMedical } from "react-icons/bi";
 import { FaMinus } from "react-icons/fa";
@@ -7,16 +7,16 @@ import reducer from "./reducer";
 const initialValue = 0;
 
 const ReducerHook = () => {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0); commenting because we will do by useReducer hooks  
 
-  // const [count, dispatch] = useReducer(reducer, initialValue);
+  const [count, dispatch] = useReducer(reducer, initialValue); // here reducer is function
 
   return (
     <>
       <Wrapper>
-        <div className="container">
-          <button onClick={() => dispatch({ type: "INC" })}>
-            <BiPlusMedical className="icon" />
+        <div className="container"> 
+          <button onClick={() => dispatch({ type: "INC" })}>   
+          <BiPlusMedical className="icon" />
           </button>
           <h1>{count}</h1>
           <button onClick={() => dispatch({ type: "DEC" })}>
@@ -47,3 +47,6 @@ const Wrapper = styled.section`
 `;
 
 export default ReducerHook;
+
+
+ // dispatch ko call karte waqt hamesha object passs karna hota hai jisme ek property mandatory hota hai type: , aur operation perform hoga inside reduceer (trigger hoga reducer)

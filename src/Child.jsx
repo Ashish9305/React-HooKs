@@ -9,6 +9,7 @@ const Child = () => {
   return (
     <div>
       Child = My name is {userData.name} and my age is {userData.age}.{" "}
+      {/* Child = My name is {name} and my age is {age}.{" "} */}
     </div>
   );
 };
